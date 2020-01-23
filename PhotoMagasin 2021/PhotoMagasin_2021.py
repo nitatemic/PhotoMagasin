@@ -1,25 +1,12 @@
 from tkinter import *
 from PIL import Image   # On importe la lib PIL
 
-ImgVanilla = input()# Lien de la photo d'origine
-
-# Main window
-Main = Tk()
-
-#Presentation
-MainLabel = Label(Main, text = 'Bienvenue dans PhotoMagasin 2021')
-MainLabel.pack()
-#Bouton Exit
-ExitButton = Button(Main, text = 'Quitter', command = Main.destroy)
-ExitButton.pack()
-
-# Gestionnaire d'évenement
-Main.mainloop()
+ImgVanilla = Image.open(input())    # On ouvre l'image vanilla
+largeur,hauteur = imgSource.size 
 
 def flou():
-    imgSource = Image.open(ImgVanilla)    # On ouvre l'image fruits.png
-    largeur,hauteur = imgSource.size        # On recupere la taille de l'image (En pixel)
-    imgFinal = Image.new('RGB', (largeur,hauteur))
+    imgFinalF = Image.new('RGB', (largeur,hauteur))
+
 
     for y in range(1, largeur - 1):
         for x in range(1, hauteur - 1):
@@ -32,8 +19,11 @@ def flou():
     imgFinal.show()
 
 def contour():
-    imgSource = Image.open(ImgVanilla)    # On ouvre l'image fruits.png
-    largeur,hauteur = imgSource.size        # On recupere la taille de l'image (En pixel)
-    imgFinal = Image.new('RGB', (largeur,hauteur))
-    ImgNew = flou(ImgNew)
-    
+   
+    imgFinalC = Image.new('RGB', (largeur,hauteur))
+    flou(imgVanilla)
+    for l in range(1, largeur - 1):
+        for h in range(1, hauteur - 1):
+            pf = imgFinalF((l, h))
+            p = imgVanilla((l, h))
+            
