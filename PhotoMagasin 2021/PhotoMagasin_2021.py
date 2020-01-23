@@ -1,6 +1,8 @@
 from tkinter import *
 from PIL import Image   # On importe la lib PIL
 
+ImgVanilla = input()# Lien de la photo d'origine
+
 # Main window
 Main = Tk()
 
@@ -15,7 +17,7 @@ ExitButton.pack()
 Main.mainloop()
 
 def flou():
-    imgSource = Image.open("chien.png")    # On ouvre l'image fruits.png
+    imgSource = Image.open(ImgVanilla)    # On ouvre l'image fruits.png
     largeur,hauteur = imgSource.size        # On recupere la taille de l'image (En pixel)
     imgFinal = Image.new('RGB', (largeur,hauteur))
 
@@ -26,5 +28,5 @@ def flou():
             NewPxG = round((imgSource.getpixel((x - 1 ,y - 1))[1] + imgSource.getpixel((x , y - 1))[1] + imgSource.getpixel((x + 1 ,y - 1))[1] + imgSource.getpixel((x -1 , y))[1] + imgSource.getpixel((x + 1 ,y))[1] + imgSource.getpixel((x - 1 ,y + 1))[1] + imgSource.getpixel((x , y + 1))[1] + imgSource.getpixel((x + 1,y + 1))[1]) / 8)
             NewPxB = round((imgSource.getpixel((x - 1 ,y - 1))[2] + imgSource.getpixel((x , y - 1))[1] + imgSource.getpixel((x + 1 ,y - 1))[2] + imgSource.getpixel((x -1 , y))[2] + imgSource.getpixel((x + 1 ,y))[2] + imgSource.getpixel((x - 1 ,y + 1))[2] + imgSource.getpixel((x , y + 1))[2] + imgSource.getpixel((x + 1,y + 1))[2]) / 8)
             imgFinal.putpixel((x , y), (NewPxR, NewPxG, NewPxB))
-    imgFinal.save('Flou.png')
+    imgFinal.save(ImgNew)
     imgFinal.show()
