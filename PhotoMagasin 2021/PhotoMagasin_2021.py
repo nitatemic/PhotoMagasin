@@ -30,3 +30,10 @@ def flou():
             imgFinal.putpixel((x , y), (NewPxR, NewPxG, NewPxB))
     imgFinal.save(ImgNew)
     imgFinal.show()
+
+def contour():
+    imgSource = Image.open(ImgVanilla)    # On ouvre l'image fruits.png
+    largeur,hauteur = imgSource.size        # On recupere la taille de l'image (En pixel)
+    imgFinal = Image.new('RGB', (largeur,hauteur))
+    ImgNew = flou(ImgNew)
+    
