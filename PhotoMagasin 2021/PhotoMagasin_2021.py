@@ -1,3 +1,4 @@
+from tkinter import filedialog
 from tkinter import *
 from PIL import Image   # On importe la lib PIL
 
@@ -5,8 +6,7 @@ Menu = Tk() # création de la fenêtre du menu
 TxtMenu = Label(Menu, text = 'Txt de bienvenue', fg = 'black')
 TxtMenu.pack()
 LienImg = StringVar()
-Menu.filename = filedialog.askopenfilename(initialdir = "/",title = "Sélectionner une image",filetypes = (("Image png","*.png")))
-Lien.pack()
+Menu.filename = filedialog.askopenfilename(initialdir = "/",title = "Select file",filetypes = (("Fichier PNG","*.png"),))
 
 imgSource = Image.open(input())    # On ouvre l'image 
 largeur,hauteur = imgSource.size 
