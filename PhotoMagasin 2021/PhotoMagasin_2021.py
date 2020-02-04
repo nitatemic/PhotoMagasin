@@ -5,7 +5,7 @@ Menu = Tk() # création de la fenêtre du menu
 TxtMenu = Label(Menu, text = 'Txt de bienvenue', fg = 'black')
 TxtMenu.pack()
 LienImg = StringVar()
-Lien = Entry(Menu,text ="Lien de la photo", textvariable = LienImg)
+Menu.filename = filedialog.askopenfilename(initialdir = "/",title = "Sélectionner une image",filetypes = (("Image png","*.png")))
 Lien.pack()
 
 imgSource = Image.open(input())    # On ouvre l'image 
@@ -53,11 +53,11 @@ def flou():     # Effet de flou
 
 
 
-BtFl = Button(Menu, text = 'Flouter la photo', command = flou())
-BtFl.pack()
-BtCtr = Button(Menu, text = 'Mettre en avant les contours de la photo', command = contour())
-BtCtr.pack()
-BtRlf = Button(Menu, text = 'Ajouter des reliefs à la photo', command = relief())
-BtRlf.pack()
+BtnFl = Button(Menu, text = 'Flouter la photo', command = flou)
+BtnFl.pack()
+BtnCtr = Button(Menu, text = 'Mettre en avant les contours de la photo', command = contour)
+BtnCtr.pack()
+BtnRlf = Button(Menu, text = 'Ajouter des reliefs à la photo', command = relief)
+BtnRlf.pack()
 
 Menu.mainloop()
