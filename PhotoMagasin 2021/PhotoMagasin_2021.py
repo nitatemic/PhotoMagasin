@@ -1,5 +1,4 @@
 from tkinter import *
-
 from PIL import Image   # On importe la lib PIL
 
 Menu = Tk() # création de la fenêtre du menu
