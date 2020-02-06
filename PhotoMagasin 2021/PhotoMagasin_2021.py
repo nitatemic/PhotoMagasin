@@ -32,6 +32,8 @@ def flou():     # Effet de flou
             imgFinalF.putpixel((x , y), (NewPxRF, NewPxGF, NewPxBF)) # Création de la nouvelle image
     SaveLocaF = filedialog.asksaveasfilename(initialdir = "/",title = "Selectionner un emplacement de sauvegarde",filetypes = (("Fichier PNG","*.png"),), defaultextension='.png') # Explorateur pour choisir ou sauvegarder la photo
     imgFinalF.save(SaveLocaF)
+    imgFinalF.show() # On montre l'image modifiée
+    
 
 def contour():  # Effet de detection des contour
     imgFinalC = Image.new('RGB', (largeur, hauteur))
@@ -45,6 +47,7 @@ def contour():  # Effet de detection des contour
             imgFinalC.putpixel((x , y), (NewPxRC, NewPxGC, NewPxBC)) # Création de la nouvelle image
     SaveLocaC = filedialog.asksaveasfilename(initialdir = "/",title = "Selectionner un emplacement de sauvegarde",filetypes = (("Fichier PNG","*.png"),), defaultextension='.png') # Explorateur pour choisir ou sauvegarder la photo
     imgFinalC.save(SaveLocaC)
+    imgFinalC.show() # On montre l'image modifiée
 
 
 def relief():   # Effet de relief
@@ -59,6 +62,7 @@ def relief():   # Effet de relief
             imgFinalR.putpixel((x , y), (NewPxRF, NewPxGF, NewPxBF)) # Création de la nouvelle image
     SaveLocaR = filedialog.asksaveasfilename(initialdir = "/",title = "Selectionner un emplacement de sauvegarde",filetypes = (("Fichier PNG","*.png"),), defaultextension='.png') # Explorateur pour choisir ou sauvegarder la photo
     imgFinalR.save(SaveLocaR)
+    imgFinalC.show() # On montre l'image modifiée
 
 def contraste():   # Effet de contraste
     imgFinalCO = Image.new('RGB', (largeur, hauteur))
@@ -72,6 +76,7 @@ def contraste():   # Effet de contraste
             imgFinalCO.putpixel((x , y), (NewPxRCO, NewPxGCO, NewPxBCO)) # Création de la nouvelle image
     SaveLocaCO = filedialog.asksaveasfilename(initialdir = "/",title = "Selectionner un emplacement de sauvegarde",filetypes = (("Fichier PNG","*.png"),), defaultextension='.png') # Explorateur pour choisir ou sauvegarder la photo
     imgFinalCO.save(SaveLocaCO)
+    imgFinalC.show() # On montre l'image modifiée
 
 BtnFl = Button(Menu, text = 'Flouter la photo', command = flou)
 BtnFl.pack(side = LEFT, padx = 20, pady = 5)
@@ -86,4 +91,5 @@ BtnCtrst.pack(side = LEFT, padx = 10,pady = 5)
 Menu.resizable(width=False, height=False)
 Menu.mainloop()
 
-#Progrmamme terminée le 06/02/2020 à 11:16
+#  Progrmamme terminée le 06/02/2020 à 11:16
+# © Lemenyalex et Matthieu Azzoun Minet 
