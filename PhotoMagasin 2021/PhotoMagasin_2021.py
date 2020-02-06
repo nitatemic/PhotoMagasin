@@ -36,7 +36,7 @@ def flou():     # Effet de flou
 def contour():  # Effet de detection des contour
     imgFinalC = Image.new('RGB', (largeur, hauteur))
     for x in range(1, largeur - 1): # On crée une boucle qui prend en charge le nombre de pixel horizontaux
-        for y in range(1, hauteur - 1):
+        for y in range(1, hauteur - 1): # idem mais pour le nbr de pixels verticaux
             px = imgSource.getpixel((x,y))
             # Matrice convolution de pixel en 3*3
             NewPxRC = imgSource.getpixel((x, y + 1))[0] + imgSource.getpixel((x , y - 1))[0] + imgSource.getpixel((x - 1 , y))[0] + imgSource.getpixel((x + 1 ,y))[0] + imgSource.getpixel((x , y))[0] * (-4)
@@ -50,7 +50,7 @@ def contour():  # Effet de detection des contour
 def relief():   # Effet de relief
     imgFinalR = Image.new('RGB', (largeur, hauteur))
     for x in range(1, largeur - 1): # On crée une boucle qui prend en charge le nombre de pixel horizontaux
-        for y in range(1, hauteur - 1):
+        for y in range(1, hauteur - 1): # idem mais pour le nbr de pixels verticaux
             px = imgSource.getpixel((x,y))
             # Matrice convolution de pixel en 3*3
             NewPxRF = imgSource.getpixel((x , y - 1))[0] + imgSource.getpixel((x + 1 ,y - 1))[0] * (2) - imgSource.getpixel((x -1 , y))[0] + imgSource.getpixel((x + 1 ,y))[0] + imgSource.getpixel((x ,y))[0] + imgSource.getpixel((x - 1 ,y + 1))[0] *(-2) - imgSource.getpixel((x , y + 1))[0]
@@ -63,7 +63,7 @@ def relief():   # Effet de relief
 def contraste():   # Effet de contraste
     imgFinalCO = Image.new('RGB', (largeur, hauteur))
     for x in range(1, largeur - 1): # On crée une boucle qui prend en charge le nombre de pixel horizontaux
-        for y in range(1, hauteur - 1):
+        for y in range(1, hauteur - 1): # idem mais pour le nbr de pixels verticaux
             px = imgSource.getpixel((x,y))
             # Matrice convolution de pixel en 3*3
             NewPxRCO = -imgSource.getpixel((x , y - 1))[0] - imgSource.getpixel((x - 1 , y))[0] - imgSource.getpixel((x + 1 ,y))[0] + imgSource.getpixel((x ,y))[0] * 5 - imgSource.getpixel((x , y + 1))[0]
@@ -86,4 +86,4 @@ BtnCtrst.pack(side = LEFT, padx = 10,pady = 5)
 Menu.resizable(width=False, height=False)
 Menu.mainloop()
 
-#Progrmamme termine
+#Progrmamme terminée le 06/02/2020 à 11:16
