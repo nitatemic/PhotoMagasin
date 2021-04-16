@@ -2,7 +2,8 @@
 
 ## Introduction
 
-PhotoMagasin est un project scolaire, il ne doit pas être utilisé quotidiennement sauf si vous adorer les icônes de chargement (Parce que le programme est long, très long...)
+PhotoMagasin is a school project, it should not be used daily unless you love the loading icons (Because the program is long, very long...)
+
 
 ## Code Samples
 
