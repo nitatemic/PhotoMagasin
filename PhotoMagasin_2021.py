@@ -91,5 +91,4 @@ BtnCtrst.pack(side = LEFT, padx = 10,pady = 5)
 Menu.resizable(width=False, height=False)
 Menu.mainloop()
 
-#  Progrmamme terminée le 06/02/2020 à 11:16
 # © Lemenyalex et Matthieu Azzoun Minet 
