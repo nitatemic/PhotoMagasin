@@ -26,7 +26,7 @@ The program was made under Python 3.8, it works under Python 3.9.4
 The program use :
 > Tkinter
 
-> PIL
+> PIL (Pillow)
 
 If you ever run it under Python 2.7, tell me if it works 
 
