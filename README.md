@@ -1,5 +1,5 @@
 # PhotoMagasin
-PhotoShop 2022 sortira le 31 octobre à 10h
+PhotoShop 2022 sortira le 31 octobre vers 10h
 ## Introduction
 
 PhotoMagasin is a school project, it should not be used daily unless you love the loading icons (Because the program is long, very long...)
