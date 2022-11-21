@@ -17,7 +17,7 @@ def lien(): # Fonction pour changer la photo
     largeur, hauteur = imgSource.size
 ```
 > The variables and comments are in French.
-I may translate them into English if I find the time
+I may translate them into English if I have the time
 
 ## Installation
 
